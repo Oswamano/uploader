@@ -1,0 +1,47 @@
+<div class="container-fluid white-bg">
+<div class = "text-center">
+<h1>Listing Settings</h1>
+  <%= link_to 'Back', landing_index_path, class: "btn btn-primary fixed-width"%>
+</div>
+<table class="table dt-responsive nowrap" width="100%" cellspacing="0" id = "settings" >
+  <thead>
+    <tr>
+      <th>Setting category</th>
+      <th>Setting key</th>
+      <th>Setting value</th>
+      <th class="fixed-width">Actions:</th>
+      <th class="fixed-width"></th>
+      <th class="fixed-width"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @settings.each do |setting| %>
+      <tr>
+        <td><%= setting.setting_category %></td>
+        <td><%= setting.setting_key %></td>
+        <td><%= setting.setting_value %></td>
+        <td><%= link_to 'Show', setting ,class: "btn btn-primary fixed-width"%></td>
+        <td><%= link_to 'Edit', edit_setting_path(setting) ,class: "btn btn-primary fixed-width" %></td>
+        <td><%= link_to 'Destroy', setting, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-primary fixed-width" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+</div>
+<script >
+  $(document).ready(function() {
+      $('#settings').DataTable( {
+         responsive: true,
+          "columnDefs": [
+              // refers to which columns to disable sorting on
+              // In this case the column with index three contains all the buttons 
+              { "orderable": false, "targets": [3,4,5] }
+          ]
+      } );
+  } );
+</script>
+

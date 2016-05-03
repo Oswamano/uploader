@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  state: MyText
+  county: MyText
+  city: MyText
+  name: MyText
+  days_prior: 
+  time: 2016-04-21 09:54:51
+  publishes_monday: false
+  publishes_tuesday: false
+  publishes_wednesday: false
+  publishes_thursday: false
+  publishes_friday: false
+  publishes_saturday: false
+  publishes_sunday: false
+
+two:
+  state: MyText
+  county: MyText
+  city: MyText
+  name: MyText
+  days_prior: 
+  time: 2016-04-21 09:54:51
+  publishes_monday: false
+  publishes_tuesday: false
+  publishes_wednesday: false
+  publishes_thursday: false
+  publishes_friday: false
+  publishes_saturday: false
+  publishes_sunday: false

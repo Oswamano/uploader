@@ -1,0 +1,2 @@
+module TrusteeCompaniesHelper
+end

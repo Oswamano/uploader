@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<div class = " row  border-bottom white-bg dashboard-header">
+<p>
+  	<strong>Email:</strong>
+  	<%= @user.email %>
+</p>
+
+<p>
+  	<strong>First name:</strong>
+  	<%= @user.first_name %>
+</p>
+
+<p>
+  	<strong>Last name:</strong>
+  	<%= @user.last_name %>
+</p>
+<p>
+  	<strong>Role:</strong>
+  	<%= @user.roles.first.name %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary" %> |
+<%= link_to 'Back', users_path, class: "btn btn-primary" %>
+</div>

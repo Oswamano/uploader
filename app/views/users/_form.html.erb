@@ -1,0 +1,39 @@
+<div class="field">
+    <p><%= f.label "email:" %> </p>
+    <%= f.text_field :email %>
+</div>
+<div class="field">
+    <p><%= f.label "first_name:" %></p>
+    <%= f.text_field :first_name %>
+</div>
+<div class="field">
+    <p><%= f.label "last_name:" %></p>
+    <%= f.text_field :last_name %>
+</div>
+<% if @user.new_record? %> 
+<div>
+    <p><%= f.label "password:" %></p>
+    <%= f.password_field(:password, :value => "#{@user.password}") %>
+</tr>
+<div class="field">
+    <p><%= f.label "password_confirmation:" %></p>
+    <%= f.password_field(:password_confirmation, :value => "#{@user.password_confirmation}") %>
+</div>
+<%end%>
+<table>
+    <tr>
+        <th>Choose a role for your user:</th>
+        <td>(Note that you can only choose one)</td>
+    </tr>
+<% @roles.each do |role| %>
+    <tr>
+        <th><%= role.name.capitalize %>:</th>
+        <td><%= radio_button_tag 'role', role.name %></td>
+    </tr>
+<% end %>
+</table>
+
+
+ 
+
+

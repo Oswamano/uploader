@@ -1,0 +1,48 @@
+<div class="container-fluid white-bg">
+<p id="notice"><%= notice %></p>
+<div class="text-center">
+    <h1>Listing Orders</h1>
+    <%= link_to 'New Order', new_order_path, class: "btn btn-primary fixed-width" %> | <%=link_to 'Back', landing_index_path, class: "btn btn-primary fixed-width"%>
+</div>
+
+
+
+<table class="table dt-responsive nowrap" width="100%" cellspacing="0" id = "orders" >
+  <thead>
+    <tr>
+      <th>Id:</th>
+      <th>File1</th>
+      <th>File2</th>
+      <th>File3</th>
+      <th>Actions</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.id %></td>
+        <td><%= File.basename(order.file1_url) if order.file1_url%></td>
+        <td><%= File.basename(order.file1_url) if order.file1_url%></td>
+        <td><%= File.basename(order.file1_url) if order.file1_url %></td>
+        <td><%= link_to 'Show', order, class: "btn btn-primary fixed-width" %></td>
+        <td><%= link_to 'Edit', edit_order_path(order), class: "btn btn-primary fixed-width" %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary fixed-width" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+
+
+
+<script >
+    $(document).ready(function() {
+        $('#orders').DataTable( {
+            responsive: true,
+        } );
+    } );
+</script>

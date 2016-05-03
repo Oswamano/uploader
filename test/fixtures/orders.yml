@@ -1,0 +1,79 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_recieved: 2016-04-27
+  sale: MyText
+  trustee_company_id: 
+  trustee_sale_file_number: 1
+  high_liability: false
+  apn_number: 1
+  address: MyText
+  state: MyText
+  city: MyText
+  county: MyText
+  zip_code: 1
+  post_by_date: 2016-04-27
+  newspaper_id: 
+  notice_sent: false
+  confirmation_recieved: false
+  proof_recieved: false
+  publishing_instructions: MyText
+  publishing_date_one: 2016-04-27
+  publishing_date_two: 2016-04-27
+  publishing_date_three: 2016-04-27
+  publishing_date_four: 2016-04-27
+  sale_date: 2016-04-27
+  location_id: 
+  custom_sale_location: MyText
+  trustor: MyText
+  opening_bid: 1.5
+  sold_amount: 1.5
+  sale_information_notes: MyText
+  notice_of_sale_amount: MyText
+  shipment_track_number: 1
+  shipped_to: MyText
+  back_office_note: MyText
+  posting_note: MyText
+  sale_note: MyText
+  posting_order_confirmed: false
+  agent_paid: false
+  order_active: false
+
+two:
+  date_recieved: 2016-04-27
+  sale: MyText
+  trustee_company_id: 
+  trustee_sale_file_number: 1
+  high_liability: false
+  apn_number: 1
+  address: MyText
+  state: MyText
+  city: MyText
+  county: MyText
+  zip_code: 1
+  post_by_date: 2016-04-27
+  newspaper_id: 
+  notice_sent: false
+  confirmation_recieved: false
+  proof_recieved: false
+  publishing_instructions: MyText
+  publishing_date_one: 2016-04-27
+  publishing_date_two: 2016-04-27
+  publishing_date_three: 2016-04-27
+  publishing_date_four: 2016-04-27
+  sale_date: 2016-04-27
+  location_id: 
+  custom_sale_location: MyText
+  trustor: MyText
+  opening_bid: 1.5
+  sold_amount: 1.5
+  sale_information_notes: MyText
+  notice_of_sale_amount: MyText
+  shipment_track_number: 1
+  shipped_to: MyText
+  back_office_note: MyText
+  posting_note: MyText
+  sale_note: MyText
+  posting_order_confirmed: false
+  agent_paid: false
+  order_active: false

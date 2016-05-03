@@ -1,0 +1,2 @@
+module TrusteeUsersHelper
+end

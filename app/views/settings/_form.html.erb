@@ -1,0 +1,19 @@
+<%= form_for(@setting) do |f| %>
+
+  <div class="field">
+    <span class ="breakspan"><%= f.label :setting_category %></span>
+    <%= f.text_field :setting_category %>
+  </div>
+  <div class="field">
+    <span class ="breakspan"><%= f.label :setting_key %></span>
+    <%= f.text_field :setting_key %>
+  </div>
+  <div class="field">
+    <span class ="breakspan"><%= f.label :setting_value %></span>
+    <%= f.text_field :setting_value %>
+  </div>
+  <div class="actions">
+    <p><%= f.submit %></p>
+  </div>
+
+<% end %>

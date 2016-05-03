@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid white-bg">
+    <div class="text-center">
+    <h1>User Management</h1>
+    <%=link_to 'New User', new_user_path, class: "btn btn-primary fixed-width"%> | <%=link_to 'Back', landing_index_path, class: "btn btn-primary fixed-width"%>
+    </div>
+    <table class="table dt-responsive nowrap" width="100%" cellspacing="0" id = "users" >
+        <thead>
+            <tr>
+                <th>Email:</th>
+                <th>First name:</th>
+                <th>Last name:</th>
+                <th>Role:</th>
+                <th class="fixed-width">Actions:</th>
+                <th class="fixed-width"></th>
+                <th class="fixed-width"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @users.each do |user| %>
+                <tr>
+                    <td><%= user.email %></td>
+                    <td><%= user.first_name %></td>
+                    <td><%= user.last_name %></td>
+                    <td><%= user.roles.first.name if user.roles && user.roles.first %></td>
+                    <td><%= link_to 'Show', user, class: "btn btn-primary fixed-width"%></td>
+                    <td><%= link_to 'Edit', edit_user_path(user), class: "btn btn-primary fixed-width"%></td>
+                    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary fixed-width" %></td>
+                  </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+
+<script >
+    $(document).ready(function() {
+        $('#users').DataTable( {
+            responsive: true,
+            // refers to which columns to disable sorting on
+            "columnDefs": [ { "orderable": false, "targets": [4,5,6] } ]
+        } );
+    } );
+</script>
+
+
