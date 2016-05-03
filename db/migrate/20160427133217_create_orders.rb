@@ -1,6 +1,6 @@
 class CreateOrders < ActiveRecord::Migration
   def change
-    create_table :orders, :options => "AUTO_INCREMENT = 1000" do |t| 
+    create_table :orders do |t| 
       t.date :date_recieved
       t.text :sale
 
