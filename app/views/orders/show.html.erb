@@ -5,7 +5,7 @@
 <p><%=@order.sale%></p>
 
 <p>
-<strong>Misc. File #1</strong>
+<strong>File #1</strong>
 <% if @order.file1? %> 
 <span class = "breakspan"><%= File.basename(@order.file1_url) %></span>
 <%=link_to 'Download file', @order.file1.url, class: "btn btn-primary" %>
@@ -14,7 +14,7 @@
 
 <p>
 
-<strong>Misc. File #2</strong>
+<strong>File #2</strong>
 <% if @order.file2? %> 
 <span class = "breakspan"><%= File.basename(@order.file2_url) %></span>
 <%=link_to 'Download file', @order.file2.url, class: "btn btn-primary" %>
@@ -23,7 +23,7 @@
 
 <p>
 
-<strong>Misc. File #3</strong>
+<strong>File #3</strong>
 <% if @order.file3? %> 
 <span class = "breakspan"><%= File.basename(@order.file3_url) %></span>
 <%=link_to 'Download file', @order.file3.url, class: "btn btn-primary" %>
