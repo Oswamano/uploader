@@ -11,6 +11,7 @@
   <thead>
     <tr>
       <th>Id:</th>
+      <th>comment</th>
       <th>File1</th>
       <th>File2</th>
       <th>File3</th>
@@ -24,9 +25,10 @@
     <% @orders.each do |order| %>
       <tr>
         <td><%= order.id %></td>
+        <td><%= order.sale %></td>
         <td><%= File.basename(order.file1_url) if order.file1_url%></td>
-        <td><%= File.basename(order.file1_url) if order.file1_url%></td>
-        <td><%= File.basename(order.file1_url) if order.file1_url %></td>
+        <td><%= File.basename(order.file2_url) if order.file2_url%></td>
+        <td><%= File.basename(order.file3_url) if order.file3_url %></td>
         <td><%= link_to 'Show', order, class: "btn btn-primary fixed-width" %></td>
         <td><%= link_to 'Edit', edit_order_path(order), class: "btn btn-primary fixed-width" %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary fixed-width" %></td>
