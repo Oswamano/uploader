@@ -26,6 +26,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails', '4.3.0.0'
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem 'jquery-ui-rails'
+gem 'tzinfo-data'
+gem 'win32-process'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
